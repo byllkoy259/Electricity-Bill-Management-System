@@ -1,0 +1,22 @@
+<h2 class="title-table">Tất cả các hóa đơn với mức tiêu thụ tăng dần</h2>
+
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each taget.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each taget}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+<h2 class="title-table">Tổng lượng tiêu thụ của mỗi loại dịch vụ</h2>
+
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each consumptionResults.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each consumptionResults}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+</style>
+<h2 class="title-table"> Tổng số khách hàng của mỗi loại dịch vụ</h2>
+
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each customerCountResults.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each customerCountResults}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

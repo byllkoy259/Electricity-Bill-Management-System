@@ -1,0 +1,46 @@
+{{!-- <form class="form-tra-cuu" action="bang-khach-hang">
+    <div>
+        <h2 id="text-admin">Xin chào Admin</h2>
+    </div>
+    <div style="margin-bottom: 30px;" class="form-group">
+        <label for="exampleFormControlSelect1">Lựa trọn tra cứu</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Thông tin Khách hàng</option>
+            <option>Số khách hàng đã thanh toán</option>
+        </select>
+    </div>
+    <button style="margin-bottom: 30px;" type="submit" class="btn btn-primary">Submit</button>
+</form> --}}
+
+
+<form class="form-tra-cuu" id="searchForm" action="" method="GET">
+    <div>
+        <h2 id="text-admin">Xin chào Admin</h2>
+    </div>
+    <div style="margin-bottom: 30px;" class="form-group">
+        <label for="exampleFormControlSelect1">Lựa trọn tra cứu</label>
+        <select class="form-control" id="exampleFormControlSelect1" onchange="changeAction()">
+            <option></option>
+            <option value="customerInfo">Thông tin Khách hàng</option>
+            <option value="SumtInfo">Thống kê tổng lượng tiêu thụ của mỗi loại dịch vụ </option>
+            <option value="Invoice-taget-Info"> Liệt kê tất cả các hóa đơn với mức tiêu thụ tăng dần</option>
+        </select>
+    </div>
+    <button style="margin-bottom: 30px;" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    function changeAction() {
+        const selectElement = document.getElementById('exampleFormControlSelect1');
+        const selectedValue = selectElement.value;
+        const form = document.getElementById('searchForm');
+
+        if (selectedValue === 'customerInfo') {
+            form.action = '/bang-khach-hang'; // Đổi action cho thông tin khách hàng
+        } else if (selectedValue === 'SumtInfo') {
+            form.action = '/SumtInfo'; // Đổi action cho số khách hàng đã thanh toán
+        } else if (selectedValue === 'Invoice-taget-Info') {
+            form.action = '/Invoice-taget-Info'; // Đổi action cho số khách hàng đã thanh toán
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<form class="form-tra-cuu" id="searchForm" method="get">
+    <div class="form-group">
+        <label for="identity_numberInput">Nhập mã khách hàng</label>
+        <input type="text" class="form-control" id="identity_numberInput" name="identity_number"
+            placeholder="Nhập mã khách hàng">
+    </div>
+    <div class="form-group">
+        <label for="searchOptionSelect">Lựa chọn tra cứu</label>
+        <select class="form-control" id="searchOptionSelect" name="searchOption">
+            <option value=""></option>
+            <option value="invoice">lịch sử thanh toán</option>
+            <option value="consumption">Lượng điện tiêu thụ</option>
+            <option value="searchCustomerInvoice">Hoa don</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    const searchForm = document.getElementById('searchForm');
+    const searchOptionSelect = document.getElementById('searchOptionSelect');
+
+    searchOptionSelect.addEventListener('change', function () {
+        const selectedOption = this.value;
+        if (selectedOption === 'invoice') {
+            searchForm.action = '/search-invoice';
+        } else if (selectedOption === 'consumption') {
+            searchForm.action = '/search-consumption';
+        } else if (selectedOption === 'searchCustomerInvoice') {
+            searchForm.action = '/searchCustomerInvoice';
+        }
+    });
+</script>

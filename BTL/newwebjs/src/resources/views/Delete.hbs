@@ -1,0 +1,21 @@
+<div class="mt-5 form-login" style="margin-bottom: 200px;">
+    <form action="/delete-user" method="post">
+        <h2 style="text-align: center;">Xóa khách hàng</h2>
+
+        <div class="form-group">
+            <label for="Delete-Costumer_ID">Customer_ID</label>
+            <input type="text" class="form-control" id="Delete-Costumer_ID" name="customerId"
+                placeholder="Mã khách hàng">
+            <!-- Đặt name="customerId" để dữ liệu được gửi đi -->
+        </div>
+
+        <div class="form-group">
+            <label for="Delete-Identity_number">Identity_number</label>
+            <input type="text" class="form-control" id="Delete-Identity_number" name="identityNumber"
+                placeholder="Số định danh">
+            <!-- Đặt name="identityNumber" để dữ liệu được gửi đi -->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

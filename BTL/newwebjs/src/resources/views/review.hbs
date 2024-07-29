@@ -1,0 +1,121 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2,
+    h3 {
+        color: #007BFF;
+    }
+
+    .code-block {
+        background: #f8f8f8;
+        border-left: 4px solid #007BFF;
+        padding: 10px;
+        margin: 20px 0;
+        overflow-x: auto;
+    }
+
+    .code-block pre {
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .content-section {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Giới thiệu về dự án</h1>
+
+        <div class="content-section">
+            <h2>Tổng Quan</h2>
+            <p>Dự án là một ứng dụng backend được xây dựng bằng Node.js, với mục tiêu xây dựng 1 trang web phục vụ việc
+                quản lý của công ti điện lực với khách hàng.
+        </div>
+
+        <div class="content-section">
+            <h2>Các Thư Viện và Công Nghệ Sử Dụng</h2>
+            <p>Trong <code>package.json</code>, chúng ta có thể thấy danh sách các thư viện và công nghệ đã được sử dụng
+                trong dự án này. Dưới đây là danh sách chi tiết:</p>
+
+            <h3>Dependencies (Thư Viện Chính)</h3>
+            <ul>
+                <li><strong>body-parser</strong> (<code>^1.20.2</code>): Thư viện này dùng để xử lý dữ liệu trong body
+                    của request HTTP. Nó giúp phân tích cú pháp các yêu cầu POST và đặt dữ liệu trong
+                    <code>req.body</code>.
+                </li>
+                <li><strong>dotenv</strong> (<code>^16.4.5</code>): <code>dotenv</code> được sử dụng để tải các biến môi
+                    trường từ file <code>.env</code> vào <code>process.env</code>. Điều này giúp quản lý cấu hình ứng
+                    dụng dễ dàng hơn.</li>
+                <li><strong>express</strong> (<code>^4.19.2</code>): <code>express</code> là một framework web tối giản
+                    cho Node.js, giúp xây dựng các API mạnh mẽ và dễ dàng mở rộng.</li>
+                <li><strong>express-handlebars</strong> (<code>^7.1.2</code>): <code>express-handlebars</code> là một
+                    template engine cho Express, cho phép bạn xây dựng giao diện HTML động một cách dễ dàng.</li>
+                <li><strong>pg</strong> (<code>^8.12.0</code>): Thư viện này là driver PostgreSQL cho Node.js, giúp kết
+                    nối và tương tác với cơ sở dữ liệu PostgreSQL.</li>
+                <li><strong>pg-hstore</strong> (<code>^2.3.4</code>): <code>pg-hstore</code> là một tiện ích cho
+                    PostgreSQL, dùng để xử lý dữ liệu kiểu Hstore, một dạng lưu trữ key-value trong PostgreSQL.</li>
+                <li><strong>sequelize</strong> (<code>^6.37.3</code>): <code>sequelize</code> là một ORM
+                    (Object-Relational Mapper) cho Node.js, hỗ trợ nhiều cơ sở dữ liệu khác nhau bao gồm PostgreSQL. Nó
+                    giúp đơn giản hóa việc tương tác với cơ sở dữ liệu thông qua các mô hình dữ liệu.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h3>DevDependencies (Thư Viện Phát Triển)</h3>
+            <ul>
+                <li><strong>morgan</strong> (<code>^1.10.0</code>): <code>morgan</code> là một middleware logger cho
+                    Node.js, giúp ghi lại các request HTTP trong quá trình phát triển.</li>
+                <li><strong>node-sass</strong> (<code>^9.0.0</code>): <code>node-sass</code> cho phép biên dịch các file
+                    SCSS thành CSS. Điều này rất hữu ích trong việc quản lý và tổ chức CSS trong dự án.</li>
+                <li><strong>nodemon</strong> (<code>^3.1.2</code>): <code>nodemon</code> là một công cụ giúp tự động
+                    khởi động lại ứng dụng Node.js khi có thay đổi trong mã nguồn. Điều này giúp cải thiện hiệu suất và
+                    tốc độ phát triển.</li>
+                <li><strong>sequelize-cli</strong> (<code>^6.6.2</code>): <code>sequelize-cli</code> là công cụ dòng
+                    lệnh cho Sequelize, giúp dễ dàng quản lý các tác vụ như migrations, seeders, và các công việc liên
+                    quan đến cơ sở dữ liệu.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Scripts</h2>
+            <p>Các script trong <code>package.json</code> giúp quản lý các tác vụ khác nhau trong quá trình phát triển:
+            </p>
+            <ul>
+                <li><strong>start</strong>: Chạy ứng dụng với <code>nodemon</code> để tự động tải lại khi có thay đổi
+                    trong mã nguồn.</li>
+                <li><strong>watch</strong>: Sử dụng <code>node-sass</code> để biên dịch SCSS sang CSS và theo dõi các
+                    thay đổi trong các file SCSS.</li>
+                <li><strong>test</strong>: Một script placeholder để chạy các bài test (chưa được định nghĩa cụ thể).
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>

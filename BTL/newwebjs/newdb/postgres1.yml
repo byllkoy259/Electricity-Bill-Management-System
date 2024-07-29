@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres_container_new
+    image: postgres:14.1-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres_new}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-123456}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5437:5432"
+    restart: unless-stopped
+  
+volumes:
+    postgres:
+
+#docker-compose -f postgres.yml -p project1-postgres up --build -d

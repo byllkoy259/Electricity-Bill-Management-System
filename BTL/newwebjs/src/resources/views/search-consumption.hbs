@@ -1,0 +1,43 @@
+<h2 class="title-table">Bảng chỉ số điện sử dụng {{identity_number}}</h2>
+<table border="2px" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each meterReadings.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each meterReadings}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h2 class="title-table">Bảng giá điện đang sử dụng</h2>
+<table border="2px" id="tab1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each price.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each price}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

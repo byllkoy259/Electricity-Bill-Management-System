@@ -1,0 +1,47 @@
+<h2 class="title-table">Kết quả tra cứu {{queryOption}} của khách hàng</h2>
+{{#if results.length}}
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each results.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each results}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<table border="1" class="tab-tab">
+    <h2 class="title-table"> Thanh toan</h2>
+    <thead>
+        <tr>
+            {{#each payments.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each payments}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+
+            {{/each}}
+
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>Không có kết quả nào.</p>
+{{/if}}

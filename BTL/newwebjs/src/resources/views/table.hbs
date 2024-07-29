@@ -1,0 +1,31 @@
+<h2 class="title-table">Danh sách khách hàng</h2>
+<table class="tab-tab">
+    <thead>
+        <tr>
+            <th class="tab-tab-t">Customer ID</th>
+            <th class="tab-tab-t">First Name</th>
+            <th class="tab-tab-t">Last Name</th>
+            <th class="tab-tab-t">Address</th>
+            <th class="tab-tab-t">City</th>
+            <th class="tab-tab-t">Phone</th>
+            <th class="tab-tab-t">Email</th>
+            <th class="tab-tab-t">Identity Number</th>
+            <th class="tab-tab-t">Service ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each customers}}
+        <tr>
+            <td class="tab-tab-t">{{this.customer_id}}</td>
+            <td class="tab-tab-t">{{this.first_name}}</td>
+            <td class="tab-tab-t">{{this.last_name}}</td>
+            <td class="tab-tab-t">{{this.address}}</td>
+            <td class="tab-tab-t">{{this.city}}</td>
+            <td class="tab-tab-t">{{this.phone}}</td>
+            <td class="tab-tab-t">{{this.email}}</td>
+            <td class="tab-tab-t">{{this.identity_number}}</td>
+            <td class="tab-tab-t">{{this.service_id}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

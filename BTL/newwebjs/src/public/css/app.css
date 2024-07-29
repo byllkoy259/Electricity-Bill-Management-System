@@ -1,0 +1,66 @@
+.navbar {
+  border-radius: 6px;
+}
+
+
+.carousel-inner {
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.form-login {
+  border: 2px solid rgb(24, 23, 23);
+  border-radius: 5px;
+  padding: 25px;
+  background-color: #D3D3D3;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.form-tra-cuu {
+  margin-top: 60px;
+  margin-bottom: 400px;
+  border: 2px solid rgb(24, 23, 23);
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.admin-item {
+  margin-right: 80px;
+  color: azure;
+}
+
+#text-admin {
+  color: black;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.slide-home-page {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-body-item-text {
+  margin-bottom: 0px;
+}
+
+.title-table {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.tab-tab {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgb(250, 245, 238);
+}
+
+.tab-tab-t {
+  border: 1px solid #705b5b;
+  padding: 8px;
+}

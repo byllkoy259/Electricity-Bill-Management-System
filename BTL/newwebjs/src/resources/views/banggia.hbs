@@ -1,0 +1,22 @@
+<h2 class="title-table">Bảng giá điện theo từng cập nhật</h2>
+
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each customers.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each customers}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

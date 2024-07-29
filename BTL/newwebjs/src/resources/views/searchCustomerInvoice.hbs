@@ -1,0 +1,74 @@
+<h2 class="title-table">Thông tin khách hàng</h2>
+<p><strong>Họ:</strong> {{customer.first_name}}</p>
+<p><strong>Tên:</strong> {{customer.last_name}}</p>
+<p><strong>Mã khách hàng:</strong> {{customer.customer_id}}</p>
+<p><strong>Số CMND:</strong> {{customer.identity_number}}</p>
+
+
+<h2 class="title-table">Bảng điện đã sử dụng</h2>
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each invoices.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each invoices}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+
+<h2 class="title-table">Bảng giá áp dụng</h2>
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each price.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each price}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h2 class="title-table"> Thanh toán</h2>
+<table border="1" class="tab-tab">
+    <thead>
+        <tr>
+            {{#each payments.[0]}}
+            <th class="tab-tab-t">{{@key}}</th>
+            {{/each}}
+
+        </tr>
+
+    </thead>
+    <tbody>
+        {{#each payments}}
+        <tr>
+            {{#each this}}
+            <td class="tab-tab-t">{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
